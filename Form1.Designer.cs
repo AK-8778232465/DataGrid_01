@@ -439,10 +439,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(354, 249);
-            this.Controls.Add(this.GroupRegister);
             this.Controls.Add(this.GroupLogin);
             this.Controls.Add(this.GroupVerify);
             this.Controls.Add(this.GroupReset);
+            this.Controls.Add(this.GroupRegister);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "SharpData";
