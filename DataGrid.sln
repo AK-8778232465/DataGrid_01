@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGrid", "DataGrid.csproj", "{5C2A6FFA-ACAB-4907-947B-20AD22D34261}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DataGrid_Installer", "..\DataGrid_Installer\DataGrid_Installer.vdproj", "{314A7608-4CB5-4704-AE2B-D57634FD6F71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{5C2A6FFA-ACAB-4907-947B-20AD22D34261}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C2A6FFA-ACAB-4907-947B-20AD22D34261}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C2A6FFA-ACAB-4907-947B-20AD22D34261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{314A7608-4CB5-4704-AE2B-D57634FD6F71}.Debug|Any CPU.ActiveCfg = Debug
+		{314A7608-4CB5-4704-AE2B-D57634FD6F71}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
