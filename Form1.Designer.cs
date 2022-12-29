@@ -103,7 +103,7 @@
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(237, 36);
+            this.lblResult.Location = new System.Drawing.Point(54, 165);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(0, 13);
             this.lblResult.TabIndex = 5;
@@ -235,7 +235,7 @@
             this.GroupReset.Controls.Add(this.btnShowPass);
             this.GroupReset.Controls.Add(this.txtConfirm);
             this.GroupReset.Controls.Add(this.lblConfirm);
-            this.GroupReset.Location = new System.Drawing.Point(32, 25);
+            this.GroupReset.Location = new System.Drawing.Point(27, 22);
             this.GroupReset.Name = "GroupReset";
             this.GroupReset.Size = new System.Drawing.Size(300, 200);
             this.GroupReset.TabIndex = 19;
@@ -252,7 +252,7 @@
             this.GroupVerify.Controls.Add(this.txtForgotMail);
             this.GroupVerify.Controls.Add(this.btnGetCode);
             this.GroupVerify.Controls.Add(this.lblForgotMail);
-            this.GroupVerify.Location = new System.Drawing.Point(32, 25);
+            this.GroupVerify.Location = new System.Drawing.Point(27, 22);
             this.GroupVerify.Name = "GroupVerify";
             this.GroupVerify.Size = new System.Drawing.Size(300, 200);
             this.GroupVerify.TabIndex = 20;
@@ -271,13 +271,14 @@
             // 
             // GroupLogin
             // 
+            this.GroupLogin.Controls.Add(this.lblResult);
             this.GroupLogin.Controls.Add(this.txtPassword);
             this.GroupLogin.Controls.Add(this.txtUsername);
             this.GroupLogin.Controls.Add(this.lblUsername);
             this.GroupLogin.Controls.Add(this.btnResetPass);
             this.GroupLogin.Controls.Add(this.lblPassword);
             this.GroupLogin.Controls.Add(this.btnLogin);
-            this.GroupLogin.Location = new System.Drawing.Point(32, 25);
+            this.GroupLogin.Location = new System.Drawing.Point(27, 22);
             this.GroupLogin.Name = "GroupLogin";
             this.GroupLogin.Size = new System.Drawing.Size(300, 200);
             this.GroupLogin.TabIndex = 21;
@@ -289,11 +290,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(384, 261);
+            this.ClientSize = new System.Drawing.Size(354, 249);
             this.Controls.Add(this.GroupLogin);
             this.Controls.Add(this.GroupVerify);
             this.Controls.Add(this.GroupReset);
-            this.Controls.Add(this.lblResult);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "SharpData";
@@ -305,7 +305,6 @@
             this.GroupLogin.ResumeLayout(false);
             this.GroupLogin.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
