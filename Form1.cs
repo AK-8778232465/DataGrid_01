@@ -240,6 +240,7 @@ namespace DataGrid
                 GroupRegister.Visible = false;
                 GroupLogin.Visible = true;
                 txtEmailreg.Text = txtEmpreg.Text = txtFnamereg.Text = txtPasswordreg.Text = txtUnamereg.Text = "";
+                MessageBox.Show("*** Account registered Successfully ***");
             }
             else
             {
