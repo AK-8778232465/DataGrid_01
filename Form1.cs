@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Data;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Data.SqlClient;
 using System.Configuration;
-using System.Net.Mail;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
 using System.Net;
+using System.Net.Mail;
+using System.Windows.Forms;
 
 
 namespace DataGrid
@@ -30,6 +30,7 @@ namespace DataGrid
         private void Form1_Load(object sender, EventArgs e)
         {
             btnResetPass.Enabled = false;
+            Size = new Size(370, 290);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -61,10 +62,18 @@ namespace DataGrid
                     SqlDataReader loginTable = cmd.ExecuteReader();
                     if (loginTable.Read())
                     {
-                        lblResult.Visible= true;
+                        //  lblResult.Visible= true;
                         string uName = (string)loginTable["name"];
-                        lblResult.Text = "Welcome "+ uName;
+                        lblResult.Text = "Welcome " + uName;
                         MessageBox.Show("Login success");
+                        Size = new Size(1200, 800);
+                        GroupLogin.Visible = false;
+                        GroupReset.Visible = false;
+                        GroupVerify.Visible = false;
+                        GroupRegister.Visible = false;
+                        AppPanel.Visible = true;
+                        FormBorderStyle = FormBorderStyle.None;
+                        WindowState = FormWindowState.Maximized;
                     }
                     else
                     {
@@ -143,7 +152,7 @@ namespace DataGrid
                     {
                         MessageBox.Show(ex.Message);
                     }
-                } 
+                }
                 else
                 {
                     txtForgotMail.Text = "";
@@ -172,7 +181,7 @@ namespace DataGrid
 
         private void btnReseted_Click(object sender, EventArgs e)
         {
-            if(txtNewPass.Text != "" && txtConfirm.Text != "" && txtNewPass.Text == txtConfirm.Text)
+            if (txtNewPass.Text != "" && txtConfirm.Text != "" && txtNewPass.Text == txtConfirm.Text)
             {
                 try
                 {
@@ -190,7 +199,7 @@ namespace DataGrid
                 SqlDataReader loginTable = cmd.ExecuteReader();
                 GroupReset.Visible = false;
                 GroupLogin.Visible = true;
-            } 
+            }
             else
             {
                 MessageBox.Show("*** Both Password fields should be same ***");
@@ -242,7 +251,8 @@ namespace DataGrid
                 if (txtEmailreg.Text == "")
                 {
                     txtEmailreg.BackColor = Color.MistyRose;
-                } else
+                }
+                else
                 {
                     txtEmailreg.BackColor = SystemColors.Window;
                 }

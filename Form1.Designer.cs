@@ -66,6 +66,7 @@
             this.lblEmailreg = new System.Windows.Forms.Label();
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.AppPanel = new System.Windows.Forms.Panel();
             this.GroupReset.SuspendLayout();
             this.GroupVerify.SuspendLayout();
             this.GroupLogin.SuspendLayout();
@@ -358,6 +359,7 @@
             // 
             this.txtPasswordreg.Location = new System.Drawing.Point(133, 109);
             this.txtPasswordreg.Name = "txtPasswordreg";
+            this.txtPasswordreg.PasswordChar = '*';
             this.txtPasswordreg.Size = new System.Drawing.Size(131, 20);
             this.txtPasswordreg.TabIndex = 3;
             // 
@@ -433,12 +435,23 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // AppPanel
+            // 
+            this.AppPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.AppPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AppPanel.Location = new System.Drawing.Point(0, 0);
+            this.AppPanel.Name = "AppPanel";
+            this.AppPanel.Size = new System.Drawing.Size(1184, 761);
+            this.AppPanel.TabIndex = 23;
+            this.AppPanel.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(354, 249);
+            this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.Controls.Add(this.AppPanel);
             this.Controls.Add(this.GroupLogin);
             this.Controls.Add(this.GroupVerify);
             this.Controls.Add(this.GroupReset);
@@ -446,6 +459,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "SharpData";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.GroupReset.ResumeLayout(false);
             this.GroupReset.PerformLayout();
@@ -498,6 +512,7 @@
         private System.Windows.Forms.TextBox txtEmpreg;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnCreateAccount;
+        private System.Windows.Forms.Panel AppPanel;
     }
 }
 
