@@ -24,6 +24,12 @@ namespace DataGrid
         String randomCode;
         public static String to;
 
+        // Twilio API  // SharpData Verification Code
+        //SID
+        //SKbf82e9ae15dc3494467067b5aec30289
+        //Secret
+        //qwyVAD7cDBChb2ioTsIIGYRgOFKSq0mz
+
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ServerConnectionString"].ToString());
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,8 +47,6 @@ namespace DataGrid
             }
             else
             {
-
-
                 try
                 {
                     con.Close();
@@ -197,6 +201,87 @@ namespace DataGrid
                 MessageBox.Show("*** Both Password fields should be same ***");
                 txtNewPass.Text = "";
                 txtConfirm.Text = "";
+            }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            GroupRegister.Visible = true;
+            GroupLogin.Visible = false;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            GroupRegister.Visible = false;
+            GroupLogin.Visible = true;
+        }
+
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            if (txtEmailreg.Text != "" && txtEmpreg.Text != "" && txtFnamereg.Text != "" && txtPasswordreg.Text != "" && txtUnamereg.Text != "")
+            {
+                try
+                {
+                    con.Close();
+                }
+                catch
+                {
+                    //
+                }
+                con.Open();
+                SqlCommand cmd = new SqlCommand("CreateAccount", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@empId", SqlDbType.NVarChar).Value = txtEmpreg.Text.ToString();
+                cmd.Parameters.Add("@name", SqlDbType.NVarChar).Value = txtFnamereg.Text.ToString();
+                cmd.Parameters.Add("@Username", SqlDbType.NVarChar).Value = txtUnamereg.Text.ToString();
+                cmd.Parameters.Add("@Pass", SqlDbType.NVarChar).Value = txtPasswordreg.Text.ToString();
+                cmd.Parameters.Add("@Email", SqlDbType.NVarChar).Value = txtEmailreg.Text.ToString();
+                SqlDataReader loginTable = cmd.ExecuteReader();
+                GroupRegister.Visible = false;
+                GroupLogin.Visible = true;
+                txtEmailreg.Text = txtEmpreg.Text = txtFnamereg.Text = txtPasswordreg.Text = txtUnamereg.Text = "";
+            }
+            else
+            {
+                if (txtEmailreg.Text == "")
+                {
+                    txtEmailreg.BackColor = Color.MistyRose;
+                } else
+                {
+                    txtEmailreg.BackColor = SystemColors.Window;
+                }
+                if (txtEmpreg.Text == "")
+                {
+                    txtEmpreg.BackColor = Color.MistyRose;
+                }
+                else
+                {
+                    txtEmpreg.BackColor = SystemColors.Window;
+                }
+                if (txtFnamereg.Text == "")
+                {
+                    txtFnamereg.BackColor = Color.MistyRose;
+                }
+                else
+                {
+                    txtFnamereg.BackColor = SystemColors.Window;
+                }
+                if (txtPasswordreg.Text == "")
+                {
+                    txtPasswordreg.BackColor = Color.MistyRose;
+                }
+                else
+                {
+                    txtPasswordreg.BackColor = SystemColors.Window;
+                }
+                if (txtUnamereg.Text == "")
+                {
+                    txtUnamereg.BackColor = Color.MistyRose;
+                }
+                else
+                {
+                    txtUnamereg.BackColor = SystemColors.Window;
+                }
             }
         }
     }

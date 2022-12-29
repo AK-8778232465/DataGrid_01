@@ -34,7 +34,6 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.lblResult = new System.Windows.Forms.Label();
             this.btnResetPass = new System.Windows.Forms.Button();
             this.txtForgotMail = new System.Windows.Forms.TextBox();
             this.txtVerifyCode = new System.Windows.Forms.TextBox();
@@ -52,9 +51,25 @@
             this.GroupVerify = new System.Windows.Forms.GroupBox();
             this.lblVerifyStatus = new System.Windows.Forms.Label();
             this.GroupLogin = new System.Windows.Forms.GroupBox();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.GroupRegister = new System.Windows.Forms.GroupBox();
+            this.txtEmpreg = new System.Windows.Forms.TextBox();
+            this.txtFnamereg = new System.Windows.Forms.TextBox();
+            this.txtUnamereg = new System.Windows.Forms.TextBox();
+            this.txtPasswordreg = new System.Windows.Forms.TextBox();
+            this.txtEmailreg = new System.Windows.Forms.TextBox();
+            this.lblEmpreg = new System.Windows.Forms.Label();
+            this.lblFnamereg = new System.Windows.Forms.Label();
+            this.lblUnamereg = new System.Windows.Forms.Label();
+            this.lblPasswordreg = new System.Windows.Forms.Label();
+            this.lblEmailreg = new System.Windows.Forms.Label();
+            this.btnCreateAccount = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.GroupReset.SuspendLayout();
             this.GroupVerify.SuspendLayout();
             this.GroupLogin.SuspendLayout();
+            this.GroupRegister.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -99,15 +114,6 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // lblResult
-            // 
-            this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(54, 165);
-            this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(0, 13);
-            this.lblResult.TabIndex = 5;
-            this.lblResult.Visible = false;
             // 
             // btnResetPass
             // 
@@ -271,6 +277,7 @@
             // 
             // GroupLogin
             // 
+            this.GroupLogin.Controls.Add(this.btnRegister);
             this.GroupLogin.Controls.Add(this.lblResult);
             this.GroupLogin.Controls.Add(this.txtPassword);
             this.GroupLogin.Controls.Add(this.txtUsername);
@@ -285,12 +292,154 @@
             this.GroupLogin.TabStop = false;
             this.GroupLogin.Text = "Login";
             // 
+            // btnRegister
+            // 
+            this.btnRegister.Location = new System.Drawing.Point(107, 163);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(75, 23);
+            this.btnRegister.TabIndex = 7;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(68, 16);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(0, 13);
+            this.lblResult.TabIndex = 5;
+            this.lblResult.Visible = false;
+            // 
+            // GroupRegister
+            // 
+            this.GroupRegister.Controls.Add(this.btnBack);
+            this.GroupRegister.Controls.Add(this.btnCreateAccount);
+            this.GroupRegister.Controls.Add(this.lblEmailreg);
+            this.GroupRegister.Controls.Add(this.lblPasswordreg);
+            this.GroupRegister.Controls.Add(this.lblUnamereg);
+            this.GroupRegister.Controls.Add(this.lblFnamereg);
+            this.GroupRegister.Controls.Add(this.lblEmpreg);
+            this.GroupRegister.Controls.Add(this.txtEmailreg);
+            this.GroupRegister.Controls.Add(this.txtPasswordreg);
+            this.GroupRegister.Controls.Add(this.txtUnamereg);
+            this.GroupRegister.Controls.Add(this.txtFnamereg);
+            this.GroupRegister.Controls.Add(this.txtEmpreg);
+            this.GroupRegister.Location = new System.Drawing.Point(27, 22);
+            this.GroupRegister.Name = "GroupRegister";
+            this.GroupRegister.Size = new System.Drawing.Size(300, 200);
+            this.GroupRegister.TabIndex = 22;
+            this.GroupRegister.TabStop = false;
+            this.GroupRegister.Text = "Register";
+            this.GroupRegister.Visible = false;
+            // 
+            // txtEmpreg
+            // 
+            this.txtEmpreg.Location = new System.Drawing.Point(133, 19);
+            this.txtEmpreg.Name = "txtEmpreg";
+            this.txtEmpreg.Size = new System.Drawing.Size(131, 20);
+            this.txtEmpreg.TabIndex = 0;
+            // 
+            // txtFnamereg
+            // 
+            this.txtFnamereg.Location = new System.Drawing.Point(133, 48);
+            this.txtFnamereg.Name = "txtFnamereg";
+            this.txtFnamereg.Size = new System.Drawing.Size(131, 20);
+            this.txtFnamereg.TabIndex = 1;
+            // 
+            // txtUnamereg
+            // 
+            this.txtUnamereg.Location = new System.Drawing.Point(133, 78);
+            this.txtUnamereg.Name = "txtUnamereg";
+            this.txtUnamereg.Size = new System.Drawing.Size(131, 20);
+            this.txtUnamereg.TabIndex = 2;
+            // 
+            // txtPasswordreg
+            // 
+            this.txtPasswordreg.Location = new System.Drawing.Point(133, 109);
+            this.txtPasswordreg.Name = "txtPasswordreg";
+            this.txtPasswordreg.Size = new System.Drawing.Size(131, 20);
+            this.txtPasswordreg.TabIndex = 3;
+            // 
+            // txtEmailreg
+            // 
+            this.txtEmailreg.Location = new System.Drawing.Point(133, 138);
+            this.txtEmailreg.Name = "txtEmailreg";
+            this.txtEmailreg.Size = new System.Drawing.Size(131, 20);
+            this.txtEmailreg.TabIndex = 4;
+            // 
+            // lblEmpreg
+            // 
+            this.lblEmpreg.AutoSize = true;
+            this.lblEmpreg.Location = new System.Drawing.Point(37, 22);
+            this.lblEmpreg.Name = "lblEmpreg";
+            this.lblEmpreg.Size = new System.Drawing.Size(67, 13);
+            this.lblEmpreg.TabIndex = 5;
+            this.lblEmpreg.Text = "Employee ID";
+            // 
+            // lblFnamereg
+            // 
+            this.lblFnamereg.AutoSize = true;
+            this.lblFnamereg.Location = new System.Drawing.Point(47, 55);
+            this.lblFnamereg.Name = "lblFnamereg";
+            this.lblFnamereg.Size = new System.Drawing.Size(54, 13);
+            this.lblFnamereg.TabIndex = 6;
+            this.lblFnamereg.Text = "Full Name";
+            // 
+            // lblUnamereg
+            // 
+            this.lblUnamereg.AutoSize = true;
+            this.lblUnamereg.Location = new System.Drawing.Point(46, 83);
+            this.lblUnamereg.Name = "lblUnamereg";
+            this.lblUnamereg.Size = new System.Drawing.Size(55, 13);
+            this.lblUnamereg.TabIndex = 7;
+            this.lblUnamereg.Text = "Username";
+            // 
+            // lblPasswordreg
+            // 
+            this.lblPasswordreg.AutoSize = true;
+            this.lblPasswordreg.Location = new System.Drawing.Point(46, 112);
+            this.lblPasswordreg.Name = "lblPasswordreg";
+            this.lblPasswordreg.Size = new System.Drawing.Size(53, 13);
+            this.lblPasswordreg.TabIndex = 8;
+            this.lblPasswordreg.Text = "Password";
+            // 
+            // lblEmailreg
+            // 
+            this.lblEmailreg.AutoSize = true;
+            this.lblEmailreg.Location = new System.Drawing.Point(53, 141);
+            this.lblEmailreg.Name = "lblEmailreg";
+            this.lblEmailreg.Size = new System.Drawing.Size(46, 13);
+            this.lblEmailreg.TabIndex = 9;
+            this.lblEmailreg.Text = "Email ID";
+            // 
+            // btnCreateAccount
+            // 
+            this.btnCreateAccount.Location = new System.Drawing.Point(133, 171);
+            this.btnCreateAccount.Name = "btnCreateAccount";
+            this.btnCreateAccount.Size = new System.Drawing.Size(99, 23);
+            this.btnCreateAccount.TabIndex = 10;
+            this.btnCreateAccount.Text = "Create Account";
+            this.btnCreateAccount.UseVisualStyleBackColor = true;
+            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(7, 171);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(45, 23);
+            this.btnBack.TabIndex = 11;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(354, 249);
+            this.Controls.Add(this.GroupRegister);
             this.Controls.Add(this.GroupLogin);
             this.Controls.Add(this.GroupVerify);
             this.Controls.Add(this.GroupReset);
@@ -304,6 +453,8 @@
             this.GroupVerify.PerformLayout();
             this.GroupLogin.ResumeLayout(false);
             this.GroupLogin.PerformLayout();
+            this.GroupRegister.ResumeLayout(false);
+            this.GroupRegister.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -315,7 +466,6 @@
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Button btnResetPass;
         private System.Windows.Forms.TextBox txtForgotMail;
         private System.Windows.Forms.TextBox txtVerifyCode;
@@ -333,6 +483,21 @@
         private System.Windows.Forms.GroupBox GroupVerify;
         private System.Windows.Forms.GroupBox GroupLogin;
         private System.Windows.Forms.Label lblVerifyStatus;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.GroupBox GroupRegister;
+        private System.Windows.Forms.Label lblEmailreg;
+        private System.Windows.Forms.Label lblPasswordreg;
+        private System.Windows.Forms.Label lblUnamereg;
+        private System.Windows.Forms.Label lblFnamereg;
+        private System.Windows.Forms.Label lblEmpreg;
+        private System.Windows.Forms.TextBox txtEmailreg;
+        private System.Windows.Forms.TextBox txtPasswordreg;
+        private System.Windows.Forms.TextBox txtUnamereg;
+        private System.Windows.Forms.TextBox txtFnamereg;
+        private System.Windows.Forms.TextBox txtEmpreg;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnCreateAccount;
     }
 }
 
